@@ -17,7 +17,7 @@ async def SentViews():
     try: 
         driver.get("https://github.com/Ltooo4")
         system("title " + f"Attempts ~ {attempts}")
-        print(f"{Fore.MAGENTA}[{Fore.BLUE}+{Fore.MAGENTA}] {Fore.GREEN}Sent")
+        print(f"{Fore.MAGENTA}[{Fore.BLUE}+{Fore.MAGENTA}] {Fore.GREEN}Sent{Fore.WHITE}")
     except Exception:
         system("title " + f"Attempts ~ {attempts}")
         #print(response.status)
@@ -34,6 +34,6 @@ async def StartThreads(threads):
     await asyncio.gather(*tasks, return_exceptions=True)
 
 if __name__ == "__main__":
-    print(f"{Fore.MAGENTA}{banner}{Fore.WHITE}\n\n")
+    print(f"\n\n{Fore.MAGENTA}{banner}{Fore.WHITE}\n\n\n\n")
     while True:
         asyncio.get_event_loop().run_until_complete(StartThreads(int(10)))
