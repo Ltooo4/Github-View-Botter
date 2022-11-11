@@ -1,6 +1,4 @@
 import asyncio
-import aiohttp
-import sys
 from os import system
 from colorama import Fore
 
@@ -19,7 +17,7 @@ async def SentViews():
     try: 
         driver.get("https://github.com/Ltooo4")
         system("title " + f"Attempts ~ {attempts}")
-        print("[+] Sent")
+        print(f"{Fore.MAGENTA}[{Fore.BLUE}+{Fore.MAGENTA}] {Fore.GREEN}Sent")
     except Exception:
         system("title " + f"Attempts ~ {attempts}")
         #print(response.status)
@@ -37,5 +35,4 @@ async def StartThreads(threads):
 
 if __name__ == "__main__":
     while True:
-        asyncio.get_event_loop().run_until_complete(StartThreads(int(5)))
-    driver.close()
+        asyncio.get_event_loop().run_until_complete(StartThreads(int(10)))
