@@ -34,5 +34,6 @@ async def StartThreads(threads):
     await asyncio.gather(*tasks, return_exceptions=True)
 
 if __name__ == "__main__":
+    print(f"{Fore.MAGENTA}{banner}{Fore.WHITE}\n\n")
     while True:
         asyncio.get_event_loop().run_until_complete(StartThreads(int(10)))
